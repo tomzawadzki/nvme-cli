@@ -1623,7 +1623,7 @@ void nvme_show_relatives(const char *name)
 			free(path);
 			return;
 		}
-		err = scan_subsystems(&t, subsysnqn, 0);
+		err = scan_subsystems(&t, subsysnqn, 0, NULL);
 		if (err || t.nr_subsystems != 1) {
 			free(subsysnqn);
 			free(path);
